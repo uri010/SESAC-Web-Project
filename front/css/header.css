@@ -1,0 +1,112 @@
+:root {
+  --light-grey: #f4f4f4; /* light grey의 색깔을 미리 지정해두고 변수처럼 사용 */
+  --main-blue: #4aa8d8;
+  --dark-grey: #606060;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none; /* 링크의 밑줄 지우기 */
+  color: black;
+}
+
+.blue {
+  color: var(--main-blue);
+}
+
+header {
+  background-color: var(--light-grey);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between; /* 양 옆 빈 공간 없이 요소들을 일정한 간격으로 띄워줌 */
+  align-items: center;
+  height: 6rem;
+  margin: 0 2rem;
+}
+
+.title a {
+  font-size: 3rem;
+  color: var(--main-blue);
+  font-weight: 700; /* 글자 굵기 */
+}
+
+.unsigned {
+  display: flex; /* 로그인과 회원가입을 행 방향으로 정렬 */
+}
+
+.sign-container a {
+  font-size: 1.6rem; /* 16px */
+}
+
+.sign-in {
+  margin-right: 0.7rem;
+}
+
+.inner {
+  margin: 0 auto; /*위 아래로는 0, 양 옆으로는 auto */
+}
+
+@media only all and (min-width: 1200px) {
+  /* 1200px을 넘어가는 순간부터 아래 css 적용 */
+  .inner {
+    max-width: 1200px;
+  }
+
+  html {
+    font-size: 12px; /* 화면이 커지면 전체 font-size를 변경 */
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* 회원용 헤더: 드롭다운 */
+.dropdown {
+  position: relative; /* 요소들을 dropdown을 기준으로 배치 */
+}
+
+.dropdown-button {
+  font-size: 1.4rem;
+  cursor: pointer; /* 마우스를 올렸을 때 손 모양으로 바뀌게 */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute; /* dropdown에 마우스를 올려도 dropdown-button의 위치는 고정되어 있고, dropdown-content가 dropdown을 기준으로 바로 아래에 나타남 */
+  width: 100%;
+}
+
+.dropdown-content button {
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 2;
+  background-color: var(--light-grey);
+  border: 1px solid var(--dark-grey);
+  cursor: pointer;
+}
+
+.dropdown-content button:hover {
+  background-color: var(--dark-grey);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* dropdown에 마우스를 올리면 dropdown-content가 보여지게 함 */
+}
+
+@media only all and (max-width: 400px) {
+  /* 400px 이하이면 폰트 사이즈를 줄여줌 */
+  html {
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko"> <!--우리는 한국어가 메인!-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>성공일정</title>
+
+    <!-- 메타 태그 설정 -->
+    <!-- 저자 -->
+    <meta name="author" content="yulee" />
+     <!-- 검색 키워드로 해당 키워드가 들어간 검색의 결과로 내가 만든 페이지가 뜨게 하기 위함 -->
+    <meta
+      name="keywords"
+      content="성공일정, 아이젠하워 매트릭스, 일정관리, 업무 분배, 우선순위"
+    />
+    <!-- 사이트 링크 밑 설명 줄 -->
+    <meta
+      name="description"
+      content="아이젠하워 매트릭스, 중요도와 긴급성을 기준으로 우선 순위를 세워 성공 일정을 만듭니다."
+    />
+
+    <!-- 파비콘 지정 -->
+    <link rel="icon" href="img/favicon.ico" />
+    <!-- 아이폰 파비콘 지정 -->
+    <link rel="apple-touch-icon" href="img/favicon.ico" />
+
+    <!-- 아이콘을 끌어와서 쓸 수 있는 font-awesome-icon 사용 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- css 연결 -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/signin.css">
+  </head>
+  <body>
+        <header> 
+            <div class="inner"> <!-- 화면 크기가 1200px보다 커지면 너비를 고정시켜주기 위해 필요한 div 태그-->
+                <div class="header-container">
+                    <div class="title">
+                        <a href="index.html">성공일정</a> <!-- 성공일정 클릭시 메인페이지로 이동-->
+                    </div>
+                    <!-- title  -->
+                    <div class="sign-container">
+                        <div class="unsigned">
+                                <div class="sign-in"><a href="signin.html">로그인</a></div>
+                                <div class="sign-up"><a href="signup.html">회원가입</a></div>
+                        </div>
+                        <!-- unsigend -->
+
+                        <div class="signed hidden">
+                            <div class="dropdown">
+                                <div class="dropdown-button">
+                                    안녕하세요. <span id="dropdown-nickname">홍길동</span>님.
+                                    <i class="fas fa-caret-down"></i>
+                                </div>
+                                <!-- dropdown-button -->
+                                <div class="dropdown-content">
+                                    <button id="sign-out">로그아웃</button>
+                                </div>
+                                <!-- dropdown-content -->
+                            </div>
+                        </div>
+                        <!-- signed -->
+                    </div>
+                    <!-- sign-container -->
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main>
+          <div class="inner">
+            <div class="signin-container">
+              <h1>안녕하세요. <span class="blue">성공일정</span>입니다.</h1>
+              <div class="signin-form">
+                <input type="input" placeholder="이메일" id="email"/>
+                <input type="password" placeholder="비밀번호" id="password"/>
+                <input type="button" value="로그인" id="signin"/>             
+                <div class="signup-container">
+                  <a href="#" id="signup">회원가입</a>
+                </div>
+                <!-- signup-container -->
+              </div>
+              <!-- signin-form -->
+            </div>
+            <!-- signin-container -->
+          </div>
+        </main>
+
+        <footer>
+          <div class="inner">
+            <div class="footer-container">
+              <div class="author">개발자 : 김유리</div>
+              <div class="author-email">이메일 : dbfl0461@gmail.com</div>
+            </div>
+            <!-- footer-container -->
+          </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.5/axios.min.js" integrity="sha512-TjBzDQIDnc6pWyeM1bhMnDxtWH0QpOXMcVooglXrali/Tj7W569/wd4E8EDjk1CwOAOPSJon1VfcEt1BI4xIrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./js/common.js"></script>
+        <script src="./js/signin.js"></script>
+  </body>
+</html>

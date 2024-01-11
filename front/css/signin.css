@@ -1,0 +1,86 @@
+.blue {
+  color: var(--main-blue);
+}
+
+/* flex를 이용해서 중앙에 위치시키는 방법 
+main .inner {
+    height: 100%; /* inner가 main의 100%를 차지하게 해줌 
+}
+
+.signin-container {
+    display: flex;
+    flex-direction: column; /* 열 방향으로 아이템이 쌓임 
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* inner를 다 채울 수 있게 100%로 설정 
+}
+*/
+
+/* position을 이용한 방법 */
+main {
+  position: relative;
+}
+
+.signin-container {
+  position: absolute; /* 가장 가까운 부모 중 position이 relative인 태그는 main이므로 main을 기준으로 자신의 위치를 결정 */
+  top: 50%; /* 개체의 왼쪽 위 꼭지점이 main의 위쪽에서 50% 지점에 위치 */
+  left: 50%; /* 개체의 왼쪽 위 꼭지점이 main의 왼쪽에서 50% 지점에 위치 */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* 개체의 너비, 높이에 대해 각각 50%만큼 음의 방향으로 이동*/
+  text-align: center;
+  width: 100%;
+}
+
+.signin-container h1 {
+  font-size: 2.5rem;
+}
+
+.signin-form {
+  width: 80%;
+  max-width: 30rem;
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column; /* 열 방향으로 정렬 */
+  align-items: center;
+}
+
+.signin-form input {
+  width: 100%;
+  font-size: 1.6rem;
+  line-height: 2;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  border: 2px solid var(--dark-grey);
+}
+
+#signin {
+  padding-left: 0; /* 로그인 버튼엔 padding left를 없애줌 */
+  background-color: var(--main-blue);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#signin:hover {
+  color: black;
+}
+
+.signup-container {
+  /* signup은 a 태그라서 cursor: pointer 속성을 지정해주지 않아도 커서를 올리면 커서 모양이 바뀜 */
+  width: 100%;
+  text-align: center;
+}
+
+#signup {
+  color: black;
+  font-size: 1.4rem;
+}
+
+@media only all and (max-width: 400px) {
+  /* 400px 이하이면 폰트 사이즈를 줄여줌 */
+  html {
+    font-size: 8px;
+  }
+}
