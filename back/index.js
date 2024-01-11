@@ -8,6 +8,9 @@ const port = 3000;
 
 /* express 미들웨어 설정 */
 
+//정적파일 제공
+app.use(express.static("front"));
+
 //cors 설정 - 허가된 애들만 API를 사용할 수 있게 설정
 app.use(cors()); // 모두가 사용가능
 
