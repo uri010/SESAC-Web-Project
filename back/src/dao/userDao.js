@@ -1,4 +1,4 @@
-const { pool } = require("../../../노드/database");
+const { pool } = require("../../../back/database");
 
 exports.insertUser = async function (email, password, nickname) {
   try {

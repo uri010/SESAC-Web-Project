@@ -1,4 +1,4 @@
-const { pool } = require("../../../노드/database");
+const { pool } = require("../../../back/database");
 
 exports.getUserRows = async function () {
   try {
